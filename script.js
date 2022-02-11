@@ -1,5 +1,6 @@
 let computerPoints = 0
 let playerPoints = 0
+let gameOver = false
 
 const computerPlay = () => {
   const random = Math.floor(Math.random() * 3)
@@ -73,18 +74,19 @@ const whoWins = (playerSelection, computerSelection) => {
 }
 
 const game = (playerSelection) => {
-  const computerSelection = computerPlay()
-  document.getElementById('result').innerHTML = playRound(
-    playerSelection,
-    computerSelection,
-  )
-  if (computerPoints > 2) {
-    document.getElementById('result').innerHTML = 'Computer won!'
-    document.getElementById('scores').innerHTML = ''
-  } else if (playerPoints > 2) {
-    document.getElementById('result').innerHTML = 'Player won!'
-    document.getElementById('scores').innerHTML = ''
-  } else {
+  if (!gameOver) {
+    const computerSelection = computerPlay()
+    document.getElementById('result').innerHTML = playRound(
+      playerSelection,
+      computerSelection,
+    )
+    if (computerPoints > 2) {
+      gameOver = true
+      document.getElementById('result').innerHTML = 'Computer won!'
+    } else if (playerPoints > 2) {
+      gameOver = true
+      document.getElementById('result').innerHTML = 'Player won!'
+    }
     document.getElementById('scores').innerHTML =
       'Player: ' + playerPoints + ' | Computer: ' + computerPoints
   }

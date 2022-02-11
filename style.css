@@ -6,6 +6,7 @@ body {
 #scores,
 #result {
   text-align: center;
+  min-width: 3vh;
 }
 
 .headline {
