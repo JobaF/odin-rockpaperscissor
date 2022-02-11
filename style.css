@@ -1,17 +1,22 @@
 body {
   min-width: 100vh;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .headline {
   min-height: 10vh;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 24px;
   text-align: center;
 }
+
+.sub-headline {
+  min-height: 10vh;
+  text-align: center;
+}
+
 .buttons {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 5%;
-  min-height: 50vh;
+  min-height: 30vh;
 }

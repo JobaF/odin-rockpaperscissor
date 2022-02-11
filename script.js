@@ -1,3 +1,6 @@
+let computerWon = 0
+let playerWon = 0
+
 const computerPlay = () => {
   const random = Math.floor(Math.random() * 3)
   return random == 0 ? 'rock' : random === 1 ? 'paper' : 'scissor'
@@ -19,10 +22,12 @@ const playRound = (playerSelection, computerSelection) => {
   if (whoWon === 'draw') {
     return 'Draw! Both players chose ' + firstUpperComputer + '.'
   } else if (whoWon === 'player') {
+    playerWon++
     return (
       'Player wins! ' + firstUpperPlayer + ' beats ' + firstUpperComputer + '.'
     )
   } else if (whoWon === 'computer') {
+    computerWon++
     return (
       'Computer wins! ' +
       firstUpperComputer +
@@ -67,10 +72,13 @@ const whoWins = (playerSelection, computerSelection) => {
   }
 }
 
-const game = () => {
-  for (let i = 0; i < 5; i++) {
-    const playerSelection = prompt('What do you chose?')
+const game = (playerSelection) => {
+  if (computerWon === 3 || playerWon === 3) {
+  } else {
     const computerSelection = computerPlay()
-    console.log(playRound(playerSelection, computerSelection))
+    document.getElementById('result').innerHTML += playRound(
+      playerSelection,
+      computerSelection,
+    )
   }
 }
