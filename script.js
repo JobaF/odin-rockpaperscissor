@@ -67,6 +67,12 @@ const whoWins = (playerSelection, computerSelection) => {
   }
 }
 
-const playerSelection = 'rock'
-const computerSelection = computerPlay()
-console.log(playRound(playerSelection, computerSelection))
+const game = () => {
+  for (let i = 0; i < 5; i++) {
+    const playerSelection = prompt('What do you chose?')
+    const computerSelection = computerPlay()
+    console.log(playRound(playerSelection, computerSelection))
+  }
+}
+
+game()
