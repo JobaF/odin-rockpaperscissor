@@ -1,5 +1,5 @@
-let computerWon = 0
-let playerWon = 0
+let computerPoints = 0
+let playerPoints = 0
 
 const computerPlay = () => {
   const random = Math.floor(Math.random() * 3)
@@ -22,12 +22,12 @@ const playRound = (playerSelection, computerSelection) => {
   if (whoWon === 'draw') {
     return 'Draw! Both players chose ' + firstUpperComputer + '.'
   } else if (whoWon === 'player') {
-    playerWon++
+    playerPoints++
     return (
       'Player wins! ' + firstUpperPlayer + ' beats ' + firstUpperComputer + '.'
     )
   } else if (whoWon === 'computer') {
-    computerWon++
+    computerPoints++
     return (
       'Computer wins! ' +
       firstUpperComputer +
@@ -73,12 +73,17 @@ const whoWins = (playerSelection, computerSelection) => {
 }
 
 const game = (playerSelection) => {
-  if (computerWon === 3 || playerWon === 3) {
+  if (computerPoints === 3) {
+    document.getElementById('result').innerHTML = 'Computer won!'
+  } else if (playerPoints === 3) {
+    document.getElementById('result').innerHTML = 'Player won!'
   } else {
     const computerSelection = computerPlay()
-    document.getElementById('result').innerHTML += playRound(
+    document.getElementById('result').innerHTML = playRound(
       playerSelection,
       computerSelection,
     )
   }
+  document.getElementById('scores').innerHTML =
+    'Player: ' + playerPoints + ' | Computer: ' + computerPoints
 }

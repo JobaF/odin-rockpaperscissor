@@ -11,13 +11,18 @@
   <body>
     <h1 class="headline">Rock Paper Scissor</h1>
     <h2 class="sub-headline">Best of 5</h2>
-    <h3 class="sub-headline result"></h3>
+    <h2 id="scores">Player: 0 | Computer: 0</h2>
+    <h3 id="result"></h3>
     <div class="buttons">
-      <button onClick="">
+      <button onclick="game('rock')">
         <img src="./images/rock.png" alt="rock" />
       </button>
-      <button><img src="./images/paper.png" alt="paper" /></button>
-      <button><img src="./images/scissor.png" alt="scissor" /></button>
+      <button onclick="game('paper')">
+        <img src="./images/paper.png" alt="paper" />
+      </button>
+      <button onclick="game('scissor')">
+        <img src="./images/scissor.png" alt="scissor" />
+      </button>
     </div>
   </body>
 </html>
