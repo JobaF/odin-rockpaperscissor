@@ -74,5 +74,3 @@ const game = () => {
     console.log(playRound(playerSelection, computerSelection))
   }
 }
-
-game()
