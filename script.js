@@ -76,16 +76,14 @@ const whoWins = (playerSelection, computerSelection) => {
 const game = (playerSelection) => {
   if (!gameOver) {
     const computerSelection = computerPlay()
-    document.getElementById('result').innerHTML = playRound(
-      playerSelection,
-      computerSelection,
-    )
+    document.getElementById('results').innerHTML +=
+      '<br>' + playRound(playerSelection, computerSelection)
     if (computerPoints > 2) {
       gameOver = true
-      document.getElementById('result').innerHTML = 'Computer won!'
+      document.querySelector('.sub-headline').innerHTML = 'Computer won!'
     } else if (playerPoints > 2) {
       gameOver = true
-      document.getElementById('result').innerHTML = 'Player won!'
+      document.querySelector('.sub-headline').innerHTML = 'Player won!'
     }
     document.getElementById('scores').innerHTML =
       'Player: ' + playerPoints + ' | Computer: ' + computerPoints

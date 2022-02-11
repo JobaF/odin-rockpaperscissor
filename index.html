@@ -5,14 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock Paper Scissor</title>
-    <script src="./script.js"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <h1 class="headline">Rock Paper Scissor</h1>
-    <h2 class="sub-headline">First to 3 wins!</h2>
-    <h2 id="scores">Player: 0 | Computer: 0</h2>
-    <h2 id="result">Results</h2>
+    <div class="sub-headline">First to 3 wins!</div>
+    <div id="scores">Player: 0 | Computer: 0</div>
     <div class="buttons">
       <button onclick="game('rock')">
         <img src="./images/rock.png" alt="rock" />
@@ -27,5 +25,8 @@
         <p><strong>Scissor</strong></p>
       </button>
     </div>
+    <div id="result">Results:</div>
+    <div id="results"></div>
+    <script src="./script.js"></script>
   </body>
 </html>

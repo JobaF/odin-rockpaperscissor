@@ -6,16 +6,25 @@ body {
 }
 
 #scores,
-#result,
 .sub-headline {
   text-align: center;
   min-height: 5vh;
   line-height: 5vh;
+  font-size: 35px;
 }
-h1,
-h2,
-h3 {
-  margin: 0;
+
+#result {
+  text-align: center;
+  min-height: 5vh;
+  line-height: 5vh;
+  font-size: 35px;
+  font-weight: bold;
+}
+#results {
+  min-height: 50vh;
+  text-align: center;
+  font-size: 25px;
+  line-height: 3vh;
 }
 
 .headline {
@@ -24,6 +33,7 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0;
 }
 
 .buttons {
@@ -31,5 +41,5 @@ h3 {
   justify-content: center;
   align-items: center;
   gap: 5%;
-  min-height: 30vh;
+  min-height: 25vh;
 }
