@@ -73,17 +73,19 @@ const whoWins = (playerSelection, computerSelection) => {
 }
 
 const game = (playerSelection) => {
-  if (computerPoints === 3) {
+  const computerSelection = computerPlay()
+  document.getElementById('result').innerHTML = playRound(
+    playerSelection,
+    computerSelection,
+  )
+  if (computerPoints > 2) {
     document.getElementById('result').innerHTML = 'Computer won!'
-  } else if (playerPoints === 3) {
+    document.getElementById('scores').innerHTML = ''
+  } else if (playerPoints > 2) {
     document.getElementById('result').innerHTML = 'Player won!'
+    document.getElementById('scores').innerHTML = ''
   } else {
-    const computerSelection = computerPlay()
-    document.getElementById('result').innerHTML = playRound(
-      playerSelection,
-      computerSelection,
-    )
+    document.getElementById('scores').innerHTML =
+      'Player: ' + playerPoints + ' | Computer: ' + computerPoints
   }
-  document.getElementById('scores').innerHTML =
-    'Player: ' + playerPoints + ' | Computer: ' + computerPoints
 }

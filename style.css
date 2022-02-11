@@ -3,6 +3,11 @@ body {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+#scores,
+#result {
+  text-align: center;
+}
+
 .headline {
   min-height: 10vh;
   text-align: center;
