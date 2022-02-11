@@ -1,22 +1,28 @@
 body {
-  min-width: 100vh;
+  min-height: 100vh;
+  margin: 0;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 #scores,
-#result {
+#result,
+.sub-headline {
   text-align: center;
-  min-width: 3vh;
+  min-height: 5vh;
+  line-height: 5vh;
+}
+h1,
+h2,
+h3 {
+  margin: 0;
 }
 
 .headline {
   min-height: 10vh;
-  text-align: center;
-}
-
-.sub-headline {
-  min-height: 10vh;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: aqua;
 }
 
 .buttons {
