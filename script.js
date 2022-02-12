@@ -78,10 +78,10 @@ const game = (playerSelection) => {
     const computerSelection = computerPlay()
     document.getElementById('results').innerHTML +=
       '<br>' + playRound(playerSelection, computerSelection)
-    if (computerPoints > 2) {
+    if (computerPoints > 4) {
       gameOver = true
       document.querySelector('.sub-headline').innerHTML = 'Computer won!'
-    } else if (playerPoints > 2) {
+    } else if (playerPoints > 4) {
       gameOver = true
       document.querySelector('.sub-headline').innerHTML = 'Player won!'
     }
